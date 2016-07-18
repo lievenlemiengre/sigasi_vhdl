@@ -12,7 +12,9 @@ begin
 
   test : process is
     variable v : integer_list;
+    variable i : integer;
   begin
+    v.initialize;
     v.add(0);
     v.add(1);
     v.add(2);
@@ -21,9 +23,23 @@ begin
     v.add(5);
     v.add(6);
     v.add(7);
+    v.add(7);
+    i := v.get(7);
+    v.add(7);
+    v.add(7);
+    v.add(7);
     v.add(8);
     v.add(9);
     v.add(10);
+    
+    for i in v.as_vector'range loop
+      report to_string(v.get(i));
+    end loop;
+    
+    v.deallocate;
+    
+    
+    
     report "SUCCESS!!" severity note;
     wait;
   end process;
