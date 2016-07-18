@@ -1,2 +1,4 @@
 # sigasi_vhdl
-a set of vhdl utilities made by the Sigasi team
+an open source vhdl utility library made by the Sigasi team
+
+Work in progress (if I ever finish it)
